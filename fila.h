@@ -16,9 +16,11 @@ namespace Pedro{
         ~Fila();
         bool estaVazia()const;
         bool estaCheio()const;
-        int getQuantidadeElementos();
+        int getQuantidadeElementos()const;
+        int acessar()const;
+        void inserir(int entrada);
+        int retirar();
     };
 }
-
 
 #endif // FILA_H
