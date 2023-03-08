@@ -69,6 +69,8 @@ namespace Pedro{
         if (inicio == tamanho)
             this->inicio = 0;
         quantidadeElementos--;
+        if (estaVazia())
+            inicio = fim = -1;
         return aux;
     }
 }
