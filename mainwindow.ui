@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>457</width>
-    <height>404</height>
+    <width>650</width>
+    <height>475</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Ordenar</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -27,25 +27,12 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; font-style:italic; text-decoration: underline;&quot;&gt;Ordenação usando fila&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>120</y>
-      <width>80</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ordenar</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>120</y>
-      <width>131</width>
+      <x>370</x>
+      <y>20</y>
+      <width>151</width>
       <height>16</height>
      </rect>
     </property>
@@ -53,72 +40,42 @@
      <string>(no minimo 3 classes)</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>355</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Quantidade elementos</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_5">
-       <property name="text">
-        <string>(criar tamanho vetor)</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>Criar</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>80</y>
-      <width>415</width>
-      <height>17</height>
+      <width>477</width>
+      <height>95</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>Array original</string>
-       </property>
-      </widget>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="1">
+      <widget class="QTextEdit" name="SaidaArrayOriginal"/>
      </item>
-     <item>
+     <item row="0" column="1">
       <widget class="QLabel" name="label_6">
        <property name="text">
         <string>(mostrar vetor criado numeros aleatorios entre 0 e 100)</string>
        </property>
       </widget>
      </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Array original</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>120</y>
-      <width>146</width>
-      <height>25</height>
+      <y>180</y>
+      <width>171</width>
+      <height>27</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -130,7 +87,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="InputRegra">
        <item>
         <property name="text">
          <string>Crescente</string>
@@ -145,25 +102,74 @@
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>144</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>(criar tamanho vetor)</string>
+    </property>
+   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>160</y>
-      <width>359</width>
-      <height>194</height>
+      <x>10</x>
+      <y>51</y>
+      <width>381</width>
+      <height>27</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QLabel" name="label_8">
+      <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Array Ordenado</string>
+        <string>Quantidade de elementos:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QTextEdit" name="textEdit"/>
+      <widget class="QLineEdit" name="InputQuantidadeElementos"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="BotaoCriar">
+       <property name="text">
+        <string>Criar</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>459</width>
+      <height>103</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="2">
+      <widget class="QTextEdit" name="SaidaArrayOrdenado"/>
+     </item>
+     <item row="0" column="1" colspan="2">
+      <widget class="QPushButton" name="BotaoOrdenar">
+       <property name="text">
+        <string>Ordenar</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Array Ordenado:</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
@@ -173,8 +179,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>457</width>
-     <height>20</height>
+     <width>650</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>
