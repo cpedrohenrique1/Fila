@@ -47,13 +47,14 @@ namespace Pedro{
     {
         if (estaCheio())
             throw QString("fila ja cheia");
-        quantidadeElementos++;
         if (estaVazia())
         {
             inicio = fim = 0;
             array[fim] = entrada;
+            quantidadeElementos++;
             return;
         }
+        quantidadeElementos++;
         fim++;
         if (fim == tamanho)
             this->fim = 0;
